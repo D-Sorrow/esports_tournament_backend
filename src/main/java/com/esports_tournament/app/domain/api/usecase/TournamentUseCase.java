@@ -44,8 +44,8 @@ public class TournamentUseCase implements ITournamentServicePort {
     }
 
     @Override
-    public ResponsePage getAllTournaments(Integer size, Integer page, String sort, String order) {
-        return null;
+    public ResponsePage<Tournament> getAllTournaments(Integer size, Integer page, String sort) {
+        return tournamentPersistencePort.getAllTournaments(size, page, sort);
     }
 
     @Override
